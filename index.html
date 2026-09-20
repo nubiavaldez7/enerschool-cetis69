@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EnerSchool CETis 69</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- ================= ENCABEZADO ================= -->
+
+    <header class="encabezado">
+
+        <div class="logo-area">
+
+            <div class="logo-energia">⚡</div>
+
+            <div>
+                <h1>EnerSchool</h1>
+                <p>CETis No. 69</p>
+            </div>
+
+        </div>
+
+
+        <!-- BOTÓN HAMBURGUESA -->
+
+        <button
+            class="boton-menu"
+            id="botonMenu"
+            aria-label="Abrir menú"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <nav id="menuNavegacion">
+
+            <button onclick="mostrarSeccion('inicio')">
+                Inicio
+            </button>
+
+            <button onclick="mostrarSeccion('consumo')">
+                Consumo
+            </button>
+
+            <button onclick="mostrarSeccion('estadisticas')">
+                Estadísticas
+            </button>
+
+            <button onclick="mostrarSeccion('encuesta')">
+                Encuesta
+            </button>
+
+            <button onclick="mostrarSeccion('observacion')">
+                Observación
+            </button>
+
+            <button onclick="mostrarSeccion('investigacion')">
+                Investigación
+            </button>
+
+            <button onclick="mostrarSeccion('recomendaciones')">
+                Recomendaciones
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <main>
+
+
+        <!-- ================= INICIO ================= -->
+
+        <section id="inicio" class="seccion activa">
+
+            <div class="hero">
+
+                <div class="hero-texto">
+
+                    <span class="etiqueta">
+                        CETis No. 69
+                    </span>
+
+                    <h2>
+                        Monitoreo y optimización del consumo energético escolar
+                    </h2>
+
+                    <p>
+                        EnerSchool es una plataforma digital diseñada para
+                        registrar, calcular y analizar el consumo de energía
+                        eléctrica dentro del CETis No. 69.
+                    </p>
+
+                    <button
+                        class="boton-principal"
+                        onclick="mostrarSeccion('consumo')">
+
+                        Registrar consumo
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-icono">
+                    ⚡
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta objetivo">
+
+                <h2>🎯 Objetivo del proyecto</h2>
+
+                <p>
+                    Conocer cómo se utiliza la energía eléctrica dentro del
+                    CETis No. 69, identificar los principales hábitos de consumo
+                    y utilizar herramientas digitales que permitan registrar,
+                    analizar y promover el ahorro de energía eléctrica.
+                </p>
+
+            </div>
+
+
+            <div class="grid-tarjetas">
+
+                <div class="tarjeta">
+
+                    <div class="icono">⚡</div>
+
+                    <h3>Consumo energético</h3>
+
+                    <p>
+                        Registra aparatos eléctricos, potencia, horas de uso
+                        y días de utilización.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">📊</div>
+
+                    <h3>Estadísticas</h3>
+
+                    <p>
+                        Consulta el consumo diario, semanal y mensual
+                        registrado en la plataforma.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">💰</div>
+
+                    <h3>Costo estimado</h3>
+
+                    <p>
+                        Calcula un costo aproximado utilizando el precio
+                        de energía por kWh.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">🌱</div>
+
+                    <h3>Ahorro energético</h3>
+
+                    <p>
+                        Consulta recomendaciones para disminuir el consumo
+                        innecesario de electricidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONSUMO ================= -->
+
+        <section id="consumo" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>⚡</span>
+
+                <div>
+
+                    <h2>
+                        Registro y cálculo de consumo
+                    </h2>
+
+                    <p>
+                        Registra los aparatos eléctricos utilizados
+                        en el CETis 69.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contenedor-formulario">
+
+                <form id="formConsumo">
+
+                    <div class="campo">
+
+                        <label for="fecha">
+                            Fecha del registro
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="area">
+                            Área de la escuela
+                        </label>
+
+                        <select id="area" required>
+
+                            <option value="">
+                                Selecciona un área
+                            </option>
+
+                            <option>Aulas</option>
+
+                            <option>Laboratorios</option>
+
+                            <option>Talleres</option>
+
+                            <option>Oficinas</option>
+
+                            <option>Dirección</option>
+
+                            <option>Biblioteca</option>
+
+                            <option>Áreas comunes</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="aparato">
+                            Aparato eléctrico
+                        </label>
+
+                        <input
+                            type="text"
+                            id="aparato"
+                            placeholder="Ej. Computadora, aire acondicionado..."
+                            required>
+
+                    </div>
+
+
+                    <div class="dos-columnas">
+
+                        <div class="campo">
+
+                            <label for="cantidad">
+                                Cantidad de aparatos
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cantidad"
+                                min="1"
+                                value="1"
+                                required>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="potencia">
+                                Potencia por aparato (W)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="potencia"
+                                min="1"
+                                placeholder="Ej. 250"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dos-columnas">
+
+                        <div class="campo">
+
+                            <label for="horas">
+                                Horas de uso por día
+                            </label>
+
+                            <input
+                                type="number"
+                                id="horas"
+                                min="0"
+                                max="24"
+                                step="0.1"
+                                placeholder="Ej. 6"
+                                required>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="diasSemana">
+                                Días de uso por semana
+                            </label>
+
+                            <input
+                                type="number"
+                                id="diasSemana"
+                                min="0"
+                                max="7"
+                                value="5"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="diasMes">
+                            Días de uso por mes
+                        </label>
+
+                        <input
+                            type="number"
+                            id="diasMes"
+                            min="0"
+                            max="31"
+                            value="20"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="costoKwh">
+                            Costo estimado por kWh ($)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="costoKwh"
+                            min="0"
+                            step="0.01"
+                            value="1.50"
+                            required>
+
+                        <small>
+                            Puedes modificar este valor de acuerdo con
+                            el dato utilizado en el proyecto.
+                        </small>
+
+                    </div>
+
+
+                    <!-- RESULTADO -->
+
+                    <div class="resultado-calculo">
+
+                        <h3>
+                            Resultado del cálculo
+                        </h3>
+
+
+                        <div class="resultados">
+
+                            <div>
+
+                                <span>
+                                    Diario
+                                </span>
+
+                                <strong id="resultadoDiario">
+                                    0 kWh
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Semanal
+                                </span>
+
+                                <strong id="resultadoSemanal">
+                                    0 kWh
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Mensual
+                                </span>
+
+                                <strong id="resultadoMensual">
+                                    0 kWh
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Costo mensual
+                                </span>
+
+                                <strong id="resultadoCosto">
+                                    $0.00
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="botones-formulario">
+
+                        <button
+                            type="button"
+                            class="boton-secundario"
+                            onclick="calcularConsumo()">
+
+                            🧮 Calcular
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="boton-principal">
+
+                            💾 Guardar registro
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- TABLA -->
+
+            <div class="tarjeta">
+
+                <div class="encabezado-tabla">
+
+                    <div>
+
+                        <h2>
+                            Registros de consumo
+                        </h2>
+
+                        <p>
+                            Información almacenada en este navegador.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="boton-peligro"
+                        onclick="limpiarRegistros()">
+
+                        🗑️ Limpiar registros
+
+                    </button>
+
+                </div>
+
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Fecha</th>
+
+                                <th>Área</th>
+
+                                <th>Aparato</th>
+
+                                <th>Cantidad</th>
+
+                                <th>Potencia</th>
+
+                                <th>Diario</th>
+
+                                <th>Semanal</th>
+
+                                <th>Mensual</th>
+
+                                <th>Costo</th>
+
+                                <th>Acción</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="tablaRegistros">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ESTADISTICAS ================= -->
+
+        <section id="estadisticas" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>📊</span>
+
+                <div>
+
+                    <h2>
+                        Estadísticas de consumo
+                    </h2>
+
+                    <p>
+                        Resumen de los registros realizados.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="estadisticas-grid">
+
+                <div class="estadistica">
+
+                    <span>⚡</span>
+
+                    <p>
+                        Consumo diario
+                    </p>
+
+                    <strong id="totalDiario">
+                        0 kWh
+                    </strong>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>📅</span>
+
+                    <p>
+                        Consumo semanal
+                    </p>
+
+                    <strong id="totalSemanal">
+                        0 kWh
+                    </strong>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>🗓️</span>
+
+                    <p>
+                        Consumo mensual
+                    </p>
+
+                    <strong id="totalMensual">
+                        0 kWh
+                    </strong>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>💰</span>
+
+                    <p>
+                        Costo mensual estimado
+                    </p>
+
+                    <strong id="totalCosto">
+                        $0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h2>
+                    Consumo mensual por área
+                </h2>
+
+                <div id="graficaAreas" class="grafica">
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h2>
+                    Consumo por aparato
+                </h2>
+
+                <div id="listaAparatos">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ENCUESTA ================= -->
+
+        <section id="encuesta" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>📝</span>
+
+                <div>
+
+                    <h2>
+                        Encuesta sobre hábitos energéticos
+                    </h2>
+
+                    <p>
+                        Dirigida a estudiantes, docentes y personal administrativo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contenedor-formulario">
+
+                <form id="formEncuesta">
+
+                    <div class="campo">
+
+                        <label>
+                            ¿Cuál es tu relación con el CETis No. 69?
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option>
+                                Estudiante
+                            </option>
+
+                            <option>
+                                Docente
+                            </option>
+
+                            <option>
+                                Personal administrativo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            ¿Apagas las luces cuando no son necesarias?
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option>Siempre</option>
+
+                            <option>Algunas veces</option>
+
+                            <option>Nunca</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            ¿Desconectas los aparatos cuando no se utilizan?
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option>Siempre</option>
+
+                            <option>Algunas veces</option>
+
+                            <option>Nunca</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            ¿Consideras importante ahorrar energía eléctrica?
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option>Sí</option>
+
+                            <option>No</option>
+
+                            <option>No estoy seguro/a</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            ¿Qué área consideras que podría ahorrar más energía?
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option>Aulas</option>
+
+                            <option>Laboratorios</option>
+
+                            <option>Talleres</option>
+
+                            <option>Oficinas</option>
+
+                            <option>Dirección</option>
+
+                            <option>Biblioteca</option>
+
+                            <option>Áreas comunes</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="boton-principal">
+
+                        Enviar encuesta
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OBSERVACION ================= -->
+
+        <section id="observacion" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>👀</span>
+
+                <div>
+
+                    <h2>
+                        Guía de observación
+                    </h2>
+
+                    <p>
+                        Registro de situaciones relacionadas con el consumo energético.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>
+                    Aspectos a observar en el CETis No. 69
+                </h3>
+
+
+                <div class="lista-observacion">
+
+                    <label>
+                        <input type="checkbox">
+                        Luces encendidas en espacios vacíos.
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Computadoras encendidas sin utilizarse.
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Aires acondicionados encendidos sin necesidad.
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Aparatos conectados aunque no estén en uso.
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Iluminación natural desaprovechada.
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Equipos eléctricos utilizados durante periodos prolongados.
+                    </label>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="notasObservacion">
+                        Notas de observación
+                    </label>
+
+                    <textarea
+                        id="notasObservacion"
+                        rows="6"
+                        placeholder="Escribe aquí las observaciones realizadas..."></textarea>
+
+                </div>
+
+
+                <button
+                    class="boton-principal"
+                    onclick="guardarObservacion()">
+
+                    💾 Guardar observación
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INVESTIGACION ================= -->
+
+        <section id="investigacion" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>📚</span>
+
+                <div>
+
+                    <h2>
+                        Investigación
+                    </h2>
+
+                    <p>
+                        Información relacionada con la metodología del proyecto.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="grid-tarjetas">
+
+                <div class="tarjeta">
+
+                    <h3>
+                        🔎 Investigación descriptiva
+                    </h3>
+
+                    <p>
+                        Permite conocer cómo se utiliza la energía eléctrica
+                        dentro de la institución educativa y describir los
+                        principales hábitos de consumo.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        📖 Investigación documental
+                    </h3>
+
+                    <p>
+                        Consiste en consultar información relacionada con el
+                        consumo energético, ahorro de electricidad, herramientas
+                        digitales y proyectos tecnológicos similares.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        👀 Observación directa
+                    </h3>
+
+                    <p>
+                        Se observarán los diferentes espacios de la escuela
+                        para identificar equipos eléctricos y situaciones donde
+                        podría existir un consumo innecesario.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        📝 Encuestas
+                    </h3>
+
+                    <p>
+                        Se podrán aplicar cuestionarios a estudiantes, docentes
+                        y personal administrativo para conocer sus hábitos y
+                        conocimientos sobre el uso responsable de la energía.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        📋 Instrumentos
+                    </h3>
+
+                    <p>
+                        Se utilizarán cuestionarios, guías de observación,
+                        fichas de recopilación de información y registros de
+                        consumo eléctrico disponibles.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        💻 Aplicación tecnológica
+                    </h3>
+
+                    <p>
+                        Los datos obtenidos servirán como referencia para
+                        establecer las características de EnerSchool, como
+                        registros, gráficas, estadísticas y recomendaciones.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOMENDACIONES ================= -->
+
+        <section id="recomendaciones" class="seccion">
+
+            <div class="titulo-seccion">
+
+                <span>💡</span>
+
+                <div>
+
+                    <h2>
+                        Recomendaciones de ahorro energético
+                    </h2>
+
+                    <p>
+                        Acciones que pueden ayudar a reducir el consumo eléctrico.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="grid-tarjetas">
+
+                <div class="tarjeta recomendacion">
+
+                    <span>💡</span>
+
+                    <h3>
+                        Apagar las luces
+                    </h3>
+
+                    <p>
+                        Apagar las luces cuando un salón, oficina o laboratorio
+                        se encuentre vacío.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta recomendacion">
+
+                    <span>💻</span>
+
+                    <h3>
+                        Apagar computadoras
+                    </h3>
+
+                    <p>
+                        Apagar las computadoras cuando termine la jornada o
+                        cuando no vayan a utilizarse durante un periodo largo.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta recomendacion">
+
+                    <span>❄️</span>
+
+                    <h3>
+                        Usar correctamente el aire acondicionado
+                    </h3>
+
+                    <p>
+                        Evitar mantener los equipos encendidos cuando no haya
+                        personas en el espacio.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta recomendacion">
+
+                    <span>🔌</span>
+
+                    <h3>
+                        Desconectar equipos
+                    </h3>
+
+                    <p>
+                        Desconectar aparatos eléctricos que no sean necesarios
+                        para evitar consumos innecesarios.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta recomendacion">
+
+                    <span>☀️</span>
+
+                    <h3>
+                        Aprovechar la luz natural
+                    </h3>
+
+                    <p>
+                        Utilizar la iluminación natural cuando las condiciones
+                        del espacio lo permitan.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta recomendacion">
+
+                    <span>🌱</span>
+
+                    <h3>
+                        Crear hábitos responsables
+                    </h3>
+
+                    <p>
+                        Promover entre estudiantes y personal una cultura de
+                        ahorro y uso responsable de la energía.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <strong>
+                EnerSchool CETis 69
+            </strong>
+
+            <p>
+                Plataforma Digital para el Monitoreo y Optimización
+                del Consumo Energético Escolar.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                CETis No. 69
+            </p>
+
+            <p>
+                Proyecto escolar de programación
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
